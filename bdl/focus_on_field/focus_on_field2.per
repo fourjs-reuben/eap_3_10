@@ -1,0 +1,14 @@
+LAYOUT (MINWIDTH=80, MINHEIGHT=25)
+TABLE
+{
+[f00        |f01       ]
+}
+END
+END
+ATTRIBUTES
+f00 = formonly.dmy, TITLE="Date";
+f01 = formonly.value, FORMAT="###,#$&.&&", TITLE="Value";
+
+
+INSTRUCTIONS
+SCREEN RECORD daily_balance_scr(dmy,value) 
