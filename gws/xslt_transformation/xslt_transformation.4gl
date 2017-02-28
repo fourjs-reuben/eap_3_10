@@ -3,11 +3,9 @@ MAIN
 DEFINE data, xslt, html STRING
 DEFINE t TEXT
 
-    LET data = populate_string_from_file("xslt_transformation_data.xml")
-    LET xslt = populate_string_from_file("xslt_transformation_xslt.xml")
+    LET data = populate_string_from_file("xslt_transformation.xml")
+    LET xslt = populate_string_from_file("xslt_transformation.xslt")
 
-
-   # https://www.w3schools.com/xml/tryxslt.asp?xmlfile=cdcatalog&xsltfile=cdcatalog
     CLOSE WINDOW SCREEN
     OPEN WINDOW w WITH FORM "xslt_transformation"
 
@@ -32,12 +30,15 @@ DEFINE dom_data, dom_xslt, dom_result xml.DomDocument
 DEFINE transformer xml.XSLTtransformer
 DEFINE i INTEGER
 
+    -- load the data
     LET dom_data = xml.DomDocument.create()
     CALL dom_data.loadFromString(data)
 
+    -- load the xslt transformation
     LET dom_xslt = xml.DomDocument.create()
     CALL dom_xslt.loadFromString(xslt)
 
+    -- load the xslt into the transforer
     TRY
         LET transformer = xml.XSLTtransformer.createFromDocument(dom_xslt)
         FOR i = 1 TO transformer.getErrorsCount()
@@ -47,6 +48,7 @@ DEFINE i INTEGER
         RETURN "Error: unable to create XSLT Transformer"
     END TRY
 
+    -- apply the transformation to the data
     TRY
         LET dom_result = transformer.doTransform(dom_data)
         FOR i = 1 TO transformer.getErrorsCount()
@@ -60,9 +62,13 @@ DEFINE i INTEGER
 
     END TRY
 
+    -- return result as string
     RETURN dom_result.saveToString()
 END FUNCTION
 
+
+
+-- load the data files into string variables
 FUNCTION populate_string_from_file(filename)
 DEFINE filename STRING
 DEFINE t TEXT
@@ -73,5 +79,3 @@ DEFINE s STRING
     LET s=t
     RETURN s
 END FUNCTION
-
-  

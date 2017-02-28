@@ -62,10 +62,11 @@
     <Group label="07_gws" targetDirectory="$(ProjectDir)/gws">
       <Group label="01_xslt_transformation" targetDirectory="$(ProjectDir)/gws/xslt_transformation">
         <Application binaryName="xslt_transformation" id="-479890976" label="xslt_transformation">
+          <File filePath="gws/xslt_transformation/README.txt"/>
           <File filePath="gws/xslt_transformation/xslt_transformation.4gl"/>
           <File filePath="gws/xslt_transformation/xslt_transformation.per"/>
-          <File filePath="gws/xslt_transformation/xslt_transformation_data.xml"/>
-          <File filePath="gws/xslt_transformation/xslt_transformation_xslt.xml"/>
+          <File filePath="gws/xslt_transformation/xslt_transformation.xml"/>
+          <File filePath="gws/xslt_transformation/xslt_transformation.xslt"/>
         </Application>
       </Group>
     </Group>
