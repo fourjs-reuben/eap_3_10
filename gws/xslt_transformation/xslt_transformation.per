@@ -1,0 +1,54 @@
+LAYOUT (TEXT="XSLT Transformation Example", MINWIDTH=80, MINHEIGHT=25)
+VBOX
+HBOX
+GROUP (TEXT="XML Code")
+GRID
+{
+[f01                      ]
+[                         ]
+[                         ]
+[                         ]
+[                         ]
+}
+END
+END
+GROUP (TEXT="XSLT Code")
+GRID
+{
+[f02                      ]
+[                         ]
+[                         ]
+[                         ]
+[                         ]
+}
+END
+END
+END
+GRID
+{
+[b01]
+[i01]
+[b02]
+}
+END
+
+GROUP (TEXT="Result")
+GRID
+{
+[f03                      ]
+[                         ]
+[                         ]
+[                         ]
+[                         ]
+}
+END
+END
+END
+END
+ATTRIBUTES
+TEXTEDIT f01 = formonly.data, STRETCH=BOTH;
+TEXTEDIT f02 = formonly.xslt, STRETCH=BOTH;
+TEXTEDIT f03 = formonly.html, STRETCH=BOTH;
+BUTTON b01: transform;
+BUTTON b02: real_world_example;
+IMAGE i01: STRETCH=X, IMAGE="emtpy";
