@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Project defaultApplication="-1468817558" gstVersion="30a00" version="3.2">
+<Project defaultApplication="-1334363977" gstVersion="30a00" version="3.2">
   <Settings>
     <DynamicProperties version="2">
       <DynamicProperty description="Accent color (Android 5.0 and later)" initialValue="#9575CD" isDefaultInherited="false" isHidden="false" label="Accent color" name="gma-accent-color" readOnly="false" type="COLOR"/>
@@ -62,10 +62,24 @@
           <File filePath="bdl/focus_on_field/focus_on_field2.per"/>
         </Application>
       </Group>
+      <Group label="02_base_integer">
+        <Application binaryName="colour_addition" id="-530964032" label="colour_addition">
+          <File filePath="bdl/base_integer/colour_addition.4gl"/>
+          <File filePath="bdl/base_integer/colour_addition.per"/>
+        </Application>
+      </Group>
     </Group>
     <Group label="02_gdc"/>
     <Group label="03_gbc"/>
-    <Group label="04_gmi"/>
+    <Group label="04_gm">
+      <Group label="01_scrollgrid">
+        <Application binaryName="mail" id="-1334363977" label="mail">
+          <File filePath="gm/01_scrollgrid/mail.4gl"/>
+          <File filePath="gm/01_scrollgrid/mail.4st"/>
+          <File filePath="gm/01_scrollgrid/mail.per"/>
+        </Application>
+      </Group>
+    </Group>
     <Group label="05_gma"/>
     <Group label="06_gas"/>
     <Group label="07_gws" targetDirectory="$(ProjectDir)/gws">

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ANSI_X3.4-1968"?>
+<StyleList>
+
+  <Style name=".from">
+     <StyleAttribute name="fontWeight" value="bold" />
+    <StyleAttribute name="fontSize" value="1.25em" />
+
+  </Style>
+ 
+  <Style name=".preview">
+     <StyleAttribute name="fontWeight" value="light" />
+  </Style>
+
+
+ 
+</StyleList>
