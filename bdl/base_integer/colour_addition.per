@@ -1,0 +1,26 @@
+LAYOUT (MINWIDTH=80, TEXT="Colour")
+GRID
+{
+Red  [f01                                                                           ]
+Green[f02                                                                           ]
+Blue [f03                                                                           ]
+Hex  [f04                                                                           ]
+     [f05                                                                           ]
+     [                                                                              ]
+     [                                                                              ]
+     [                                                                              ]
+     [                                                                              ]
+     [b01|b02                                                                   |b03]    
+
+}
+END
+END
+ATTRIBUTES
+SLIDER f01 = formonly.r, VALUEMIN=0, VALUEMAX=255;
+SLIDER f02 = formonly.g, VALUEMIN=0, VALUEMAX=255;
+SLIDER f03 = formonly.b, VALUEMIN=0, VALUEMAX=255;
+EDIT f04 = formonly.h;
+TEXTEDIT f05 = formonly.colour, STRETCH=BOTH, SCROLLBARS=NONE;
+BUTTON b01: darker, TEXT="Darker";
+BUTTON b02: random, TEXT="Random";
+BUTTON b03: lighter, TEXT="Lighter";
