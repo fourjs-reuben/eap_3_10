@@ -1,0 +1,13 @@
+LAYOUT
+TABLE
+{
+[f01     ][f02      ]
+}
+END
+END
+ATTRIBUTES
+f01 = formonly.major, IMAGECOLUMN=img;
+f02 = formonly.minor;#, JUSTIFY=RIGHT;
+PHANTOM formonly.img;
+INSTRUCTIONS
+SCREEN RECORD scr(major, minor, img)

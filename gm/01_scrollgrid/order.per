@@ -1,0 +1,21 @@
+LAYOUT
+SCROLLGRID (WANTFIXEDPAGESIZE=NO)
+{
+ [f01       |f02     |f03        |f04        ]
+}
+END
+END
+ATTRIBUTES
+
+-- Lines
+LABEL f01 = formonly.product, SIZEPOLICY=FIXED;
+PHANTOM formonly.quantity;
+PHANTOM formonly.price;
+PHANTOM formonly.line_value;
+
+LABEL f02 = formonly.q, JUSTIFY=RIGHT, SIZEPOLICY=FIXED;
+LABEL f03 = formonly.p, JUSTIFY=RIGHT, SIZEPOLICY=FIXED;
+LABEL f04 = formonly.v, JUSTIFY=RIGHT, SIZEPOLICY=FIXED;
+
+INSTRUCTIONS
+SCREEN RECORD scr(product, quantity,price, line_value, q, p, v);

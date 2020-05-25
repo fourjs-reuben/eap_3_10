@@ -1,0 +1,38 @@
+LAYOUT (TEXT="Row Click Style")
+HBOX (SPLITTER)
+TREE
+{
+[f01      ]
+}
+END
+VBOX
+GROUP grp_1 (TEXT="Sub Dialog 1")
+FORM "form_1"
+END
+
+GROUP grp_2 (TEXT="Sub Dialog 2")
+FORM "form_2"
+END
+
+GROUP grp_3 (TEXT="Sub Dialog 3")
+FORM "form_3"
+END
+
+{
+...
+GROUP grp_ROWCOUNT (TEXT="Sub Dialog ROWCOUNT")
+FORM "form_ROWCOUNT"
+END
+
+}
+
+END
+END
+ATTRIBUTES
+PHANTOM formonly.id;
+PHANTOM formonly.parentid;
+PHANTOM formonly.expanded;
+f01 = formonly.field1;
+
+INSTRUCTIONS
+SCREEN RECORD scr(id, parentid, expanded, field1);

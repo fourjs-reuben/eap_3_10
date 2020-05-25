@@ -33,10 +33,8 @@ DEFINE a colourType
             CALL display_colour(a.hex)
 
         ON ACTION dialogtouched INFIELD h
-          #  IF a.hex MATCHES "#??????" THEN
             CALL hex_to_rgb(FGL_DIALOG_GETBUFFER()) RETURNING a.r, a.g, a.b
             CALL display_colour(FGL_DIALOG_GETBUFFER())
-          #  END IF
 
         ON ACTION darker
             LET a.r = a.r * 0.9

@@ -1,0 +1,25 @@
+LAYOUT (TEXT="League Table")
+SCROLLGRID (WANTFIXEDPAGESIZE=NO)
+{
+[f01              ||f02|f03|f04|f05 |f06 |f07 ]
+}
+END
+END
+ATTRIBUTES
+EDIT f01 = formonly.team;
+PHANTOM formonly.win;
+PHANTOM formonly.draw;
+PHANTOM formonly.loss;
+PHANTOM formonly.for;
+PHANTOM formonly.against;
+PHANTOM formonly.goal_difference;
+PHANTOM formonly.pts;
+EDIT f02 = formonly.w,JUSTIFY=RIGHT;
+EDIT f03 = formonly.d,JUSTIFY=RIGHT;
+EDIT f04 = formonly.l,JUSTIFY=RIGHT;
+EDIT f05 = formonly.f,JUSTIFY=RIGHT;
+EDIT f06 = formonly.a,JUSTIFY=RIGHT;
+EDIT f07 = formonly.p,JUSTIFY=RIGHT;
+INSTRUCTIONS
+SCREEN RECORD scr(team, win, draw, loss, for, against, goal_difference,pts,w,d,l,f,a,p);
+ 

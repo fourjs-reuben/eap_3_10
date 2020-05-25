@@ -1,0 +1,17 @@
+LAYOUT (TEXT="Inbox")
+SCROLLGRID (WANTFIXEDPAGESIZE=NO)
+{
+[f01            : :f02           ]
+[f03                             ]
+[f04                             ]
+[                                ]
+}
+END
+END
+ATTRIBUTES
+LABEL f01 = formonly.from, STYLE="from";
+DATETIMEEDIT f02 = formonly.when, JUSTIFY=RIGHT, STYLE="when";
+LABEL f03 = formonly.subject, STYLE="subject";
+TEXTEDIT f04 = formonly.preview,  SIZEPOLICY=FIXED, STYLE="preview", HEIGHT=2;
+INSTRUCTIONS
+SCREEN RECORD scr(from, when, subject, preview);

@@ -1,0 +1,24 @@
+LAYOUT
+GRID
+{
+Combo    [f01       ]
+Check    [f02       ]
+Radio    [f03       ]
+Spinedit [f04       ]
+Completer[f05       ]
+Date     [f06       ]
+Time     [f07  ]
+Datetime [f08                ]
+
+}
+END
+END
+ATTRIBUTES
+COMBOBOX f01 = formonly.combo, ITEMS=(("N","North"),("E","East"),("W","West"),("S","South")), NOT NULL;
+CHECKBOX f02 = formonly.check, VALUECHECKED="Y",VALUEUNCHECKED="N", NOT NULL;
+RADIOGROUP f03 = formonly.radio, ITEMS=(("N","North"),("E","East"),("W","West"),("S","South")), NOT NULL;
+SPINEDIT f04 = formonly.SPINEDIT, VALUEMIN=0;
+EDIT f05 = formonly.COMPLETER, COMPLETER;
+DATEEDIT f06 = formonly.dte;
+TIMEEDIT f07 = formonly.tme TYPE DATETIME HOUR TO MINUTE;
+DATETIMEEDIT f08 = formonly.dttme TYPE DATETIME YEAR TO SECOND;

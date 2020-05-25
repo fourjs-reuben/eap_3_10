@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="multidialog" build="3.10.05" width="74" height="1">
+  <VBox name="vbx_main">
+    <Grid width="74" height="1">
+      <Label text="Currency" posY="0" posX="0" gridWidth="9"/>
+      <FormField name="formonly.currency" colName="currency" fieldId="0" sqlTabName="formonly" notNull="1" required="1" tabIndex="1">
+        <ComboBox width="6" posY="0" posX="10" gridWidth="8">
+          <Item name="USD" text="USD"/>
+          <Item name="EUR" text="EUR"/>
+        </ComboBox>
+      </FormField>
+      <Label text="(Press TAB to trigger ON CHANGE, not implemented yet)" posY="0" posX="21" gridWidth="53"/>
+    </Grid>
+  </VBox>
+  <RecordView tabName="formonly">
+    <Link colName="currency" fieldIdRef="0"/>
+  </RecordView>
+</Form>

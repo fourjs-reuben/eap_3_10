@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ANSI_X3.4-1968"?>
+<StyleList>
+  <Style name="Window">
+     <StyleAttribute name="windowType" value="normal" />
+     <StyleAttribute name="statusBarType" value="lines3" />
+  </Style>
+   <Style name="Table">
+     <StyleAttribute name="headerAlignment" value="auto" />
+     
+
+     
+  </Style>
+   <Style name="Label.html">
+     <StyleAttribute name="textFormat" value="html" />
+  </Style>
+ 
+ 
+</StyleList>

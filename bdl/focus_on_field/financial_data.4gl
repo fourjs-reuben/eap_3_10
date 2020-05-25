@@ -26,7 +26,7 @@ DEFINE value DECIMAL(11,2)
     OPTIONS FIELD ORDER FORM
     OPTIONS INPUT WRAP
 
-    CALL ui.Interface.loadStyles("focus_on_field.4st")
+    CALL ui.Interface.loadStyles("financial_data.4st")
 
     FOR i = 1 TO 100
         LET arr[i].account =SFMT("%1", i*100 USING "&&&&&")
@@ -44,13 +44,13 @@ DEFINE value DECIMAL(11,2)
         LET arr[i].value12 = util.Math.rand(10000)/100
     END FOR
     CLOSE WINDOW SCREEN
-    OPEN WINDOW w WITH FORM "focus_on_field" ATTRIBUTES(TEXT="Account Balances")
+    OPEN WINDOW w WITH FORM "financial_data" ATTRIBUTES(TEXT="Account Balances")
 
     DISPLAY ARRAY arr TO scr.* ATTRIBUTES(UNBUFFERED, DOUBLECLICK=select, FOCUSONFIELD, ACCEPT=FALSE)
         BEFORE DISPLAY
             MESSAGE "Double click on month balance to view transactions in month"
         ON ACTION select
-            LET row = DIALOG.getCurrentRow("scr")
+            LET row = DIALOG.getCurrentRow("scr")  
             LET col = DIALOG.getCurrentItem()
             IF col = "scr.account" THEN
                 ERROR "Select a value column to drilldown on"

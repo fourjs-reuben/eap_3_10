@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ANSI_X3.4-1968"?>
+<StyleList>
+  <Style name="Window">
+     <StyleAttribute name="windowType" value="normal" />
+     <StyleAttribute name="actionPanelPosition" value="bottom" />
+     <StyleAttribute name="ringMenuPosition" value="bottom" />
+  </Style>
+    <Style name="Table">
+     <StyleAttribute name="tableType" value="listView" />
+  </Style>
+
+</StyleList>

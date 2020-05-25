@@ -1,0 +1,26 @@
+LAYOUT (TEXT="Stock On Hand Quantity")
+TABLE (HEIGHT=8 LINES)
+{
+[f01      |f02       |f03        |f04        ]
+[f01      |f02       |f03        |f04        ]
+[f01      |f02       |f03        |f04        ]
+[f01      |f02       |f03        |f04        ]
+[f01      |f02       |f03        |f04        ]
+[f01      |f02       |f03        |f04        ]
+[f01      |f02       |f03        |f04        ]
+[f01      |f02       |f03        |f04        ]
+[f01      |f02       |f03        |f04        ]
+
+
+
+}
+END
+END
+ATTRIBUTES
+LABEL f01 = formonly.colour, TITLE="Colour\\Size", STYLE="html";
+f02 = formonly.qty_s, TITLE="Small";
+f03 = formonly.qty_m, TITLE="Medium";
+f04 = formonly.qty_l, TITLE="Large";
+PHANTOM formonly.colour_text;
+INSTRUCTIONS
+SCREEN RECORD scr(colour, qty_s, qty_m, qty_l, colour_text)

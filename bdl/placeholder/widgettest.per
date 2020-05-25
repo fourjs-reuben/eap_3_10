@@ -1,0 +1,51 @@
+LAYOUT
+FOLDER
+PAGE (TEXT="Grid")
+GRID
+{
+Edit (String) [ed01      ]
+Edit (Number) [ed02      ]
+ButtonEdit    [be01      ]
+DateEdit      [de01      ]
+DateTimeEdit  [dt01      ]
+TimeEdit      [te01      ]
+SpinEdit      [se01      ]
+TextEdit      [tx01      ]
+ComboBox      [cb01      ]
+
+}
+END
+END
+PAGE (TEXT="Table")
+TABLE
+{
+ [ed06      ][be06      ]
+}
+END
+END
+END
+END
+ATTRIBUTES
+EDIT ed01 = formonly.ed01, PLACEHOLDER="Enter a string";
+EDIT ed02 = formonly.ed02, PLACEHOLDER="Enter an integer";
+BUTTONEDIT be01 = formonly.be01, PLACEHOLDER="Enter a ButtonEdit";
+
+DATEEDIT de01 = formonly.de01, PLACEHOLDER="Enter a date";
+DATETIMEEDIT dt01 = formonly.dt01, PLACEHOLDER="Enter a datetime";
+TIMEEDIT te01 = formonly.te01, PLACEHOLDER="Enter a time";
+
+SPINEDIT se01 = formonly.se01, PLACEHOLDER="Enter a spinedit";
+TEXTEDIT tx01 = formonly.tx01, PLACEHOLDER="Enter a textedit";
+
+COMBOBOX cb01 = formonly.cb01, ITEMS=(("Y","Yes"),("N","No")), PLACEHOLDER="Enter a combo", NOT NULL, QUERYEDITABLE;
+
+
+
+
+
+EDIT ed06 = formonly.ed06, PLACEHOLDER="Enter an Edit";
+BUTTONEDIT be06 = formonly.be06, PLACEHOLDER="Enter a ButtonEdit";
+
+INSTRUCTIONS
+SCREEN RECORD scr(ed06, be06)
+
